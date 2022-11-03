@@ -1,0 +1,5 @@
+
+rootProject.name = 'deeplinkCodeGen'
+include 'processor'
+include 'annotations'
+
