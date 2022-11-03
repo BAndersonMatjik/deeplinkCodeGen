@@ -2,4 +2,6 @@
 rootProject.name = 'deeplinkCodeGen'
 include 'processor'
 include 'annotations'
+include 'sample'
 
+include ':sample'
