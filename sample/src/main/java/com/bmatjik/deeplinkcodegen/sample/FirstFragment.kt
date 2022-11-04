@@ -1,11 +1,12 @@
 package com.bmatjik.deeplinkcodegen.sample
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.bmatjik.deeplinkcodegen.annotations.Destination
 import com.bmatjik.deeplinkcodegen.sample.databinding.FragmentFirstBinding
 
 /**
@@ -22,7 +23,7 @@ class FirstFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
         return binding.root
@@ -42,3 +43,9 @@ class FirstFragment : Fragment() {
         _binding = null
     }
 }
+
+@Destination
+class A (){
+
+}
+

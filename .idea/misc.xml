@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/BillyAndersonMatjik/IdeaProjects/deeplinkCodeGen/sample/src/main/res/layout/activity_main.xml" value="0.1859375" />
+        <entry key="..\:/Users/BillyAndersonMatjik/IdeaProjects/deeplinkCodeGen/sample/src/main/res/layout/content_main.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/BillyAndersonMatjik/IdeaProjects/deeplinkCodeGen/sample/src/main/res/layout/fragment_first.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/BillyAndersonMatjik/IdeaProjects/deeplinkCodeGen/sample/src/main/res/layout/fragment_second.xml" value="0.20052083333333334" />
+      </map>
+    </option>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="corretto-11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
