@@ -9,25 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8325e82a-c47a-4bed-8440-d9f3e86a8a6b" name="Changes" comment="initialize sample android project">
-      <change afterPath="$PROJECT_DIR$/annotations/src/main/java/com/bmatjik/deeplinkcodegen/annotations/DeepLinkDestination.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/processor/src/test/java/com/bmatjik/deeplinkcodegen/processor/GenerateDeeplinkTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8325e82a-c47a-4bed-8440-d9f3e86a8a6b" name="Changes" comment="Add Code gen And register Annotation Processor to Processor">
+      <change afterPath="$PROJECT_DIR$/processor/src/test/java/com/bmatjik/deeplinkcodegen/processor/DeeplinkProcessorTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annotations/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/annotations/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/processor/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/processor/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/processor/src/main/java/com/bmatjik/deeplinkcodegen/processor/DeeplinkProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/processor/src/main/java/com/bmatjik/deeplinkcodegen/processor/DeeplinkProcessor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/src/androidTest/java/com/bmatjik/deeplinkcodegen/sample/ExampleInstrumentedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/src/androidTest/java/com/bmatjik/deeplinkcodegen/sample/ExampleInstrumentedTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/src/main/java/com/bmatjik/deeplinkcodegen/sample/FirstFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/src/main/java/com/bmatjik/deeplinkcodegen/sample/FirstFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/src/main/java/com/bmatjik/deeplinkcodegen/sample/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/src/main/java/com/bmatjik/deeplinkcodegen/sample/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/src/main/java/com/bmatjik/deeplinkcodegen/sample/SecondFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/src/main/java/com/bmatjik/deeplinkcodegen/sample/SecondFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/src/main/res/layout/content_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/src/main/res/layout/content_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/src/main/res/layout/fragment_first.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/src/main/res/layout/fragment_first.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/src/main/res/layout/fragment_second.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/src/main/res/layout/fragment_second.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/processor/src/test/java/com/bmatjik/deeplinkcodegen/processor/GenerateDeeplinkTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/processor/src/test/java/com/bmatjik/deeplinkcodegen/processor/GenerateDeeplinkTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +37,7 @@
         <option value="Kotlin Object" />
         <option value="Kotlin Class" />
         <option value="JUnit5 Test Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -73,7 +61,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "corretto-11",
     "last_directory_selection": "C:/Users/BillyAndersonMatjik/IdeaProjects/deeplinkCodeGen/processor/src/test/java/com/bmatjik/deeplinkcodegen/processor",
@@ -81,7 +70,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -92,7 +81,7 @@
       <recent name="com.bmatjik.deeplinkcodegen.processor" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GenerateDeeplinkTest">
+  <component name="RunManager" selected="Gradle.DeeplinkProcessorTest.test @Destination Annotation Processor">
     <configuration name="sample" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="deeplinkCodeGen.sample" />
       <option name="DEPLOY" value="true" />
@@ -126,6 +115,29 @@
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="DeeplinkProcessorTest.test @Destination Annotation Processor" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":processor:test" />
+            <option value="--tests" />
+            <option value="&quot;com.bmatjik.deeplinkcodegen.processor.DeeplinkProcessorTest.test @Destination Annotation Processor&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="GenerateDeeplinkTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -182,6 +194,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.DeeplinkProcessorTest.test @Destination Annotation Processor" />
         <item itemvalue="Gradle.GenerateDeeplinkTest" />
         <item itemvalue="Gradle.deeplinkCodeGen [sourceSets]" />
       </list>
@@ -210,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667472631490</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add Code gen And register Annotation Processor to Processor">
+      <created>1667547232852</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667547232852</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -227,7 +247,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init commit depedency" />
     <MESSAGE value="initialize sample android project" />
-    <option name="LAST_COMMIT_MESSAGE" value="initialize sample android project" />
+    <MESSAGE value="Add Code gen And register Annotation Processor to Processor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Code gen And register Annotation Processor to Processor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

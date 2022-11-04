@@ -12,9 +12,9 @@ class GenerateDeeplinkTest {
     private fun fake() =ClassName("com.dummy.bmatjik", "CsdActivity")
 
     @Test
-    fun test() {
+    fun `test generated class`() {
 
-        GenerateDeeplink.execute("test", "com.bmatjik", "CsdActivity",fake()).apply {
+        GenerateDeeplink.execute("test", "com.bmatjik", "Csd","CsdActivity").apply {
             println(this)
         }
     }
