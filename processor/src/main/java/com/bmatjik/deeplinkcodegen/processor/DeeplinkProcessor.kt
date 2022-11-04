@@ -90,7 +90,7 @@ object GenerateDeeplink {
                     )
                         .addAnnotation(getJavaxInject()).build()
                 )
-                .addSuperinterface(DeepLinkDestination::class)
+                .addSuperinterface(getDeepLinkDestination())
                 .addFunctions(
                     listOf(
                         FunSpec.builder("matches").addModifiers(KModifier.OVERRIDE)
@@ -118,12 +118,13 @@ object GenerateDeeplink {
                     )
                 )
                 .build()
-        ).addImport("android.net", "Uri").build()
+        ).addImport("android.net", "Uri").addImport(packageName,originClassName).build()
     }
 
     private const val ANDROID_CONTENT_PACKAGE_NAME = "android.content"
     private const val JAVAX_INJECT_PACKAGE_NAME = "javax.inject"
     private const val DAGGER_HILT_QUALIFIER_PACKAGE_NAME = "dagger.hilt.android.qualifiers"
+    private const val DEEPLINK_INTERFACE ="id.anteraja.guardian.provider.navigation.deeplink"
     private fun getContext(): ClassName {
         val context = ClassName(ANDROID_CONTENT_PACKAGE_NAME, "Context")
 //        WildcardTypeName.consumerOf(context)
@@ -137,6 +138,9 @@ object GenerateDeeplink {
 
     private fun getDaggerHiltQualifierPackageName(): ClassName {
         return ClassName(DAGGER_HILT_QUALIFIER_PACKAGE_NAME, "ApplicationContext")
+    }
+    private fun getDeepLinkDestination(): ClassName {
+        return ClassName(DEEPLINK_INTERFACE, "DeeplinkProcessor")
     }
 
     private fun getContentIntentMemberName(): MemberName {

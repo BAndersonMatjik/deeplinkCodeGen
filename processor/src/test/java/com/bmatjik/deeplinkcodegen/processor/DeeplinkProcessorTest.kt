@@ -10,6 +10,7 @@ class DeeplinkProcessorTest {
     fun `test @Destination Annotation Processor`() {
         val kotlinSource = SourceFile.kotlin(
             "KClass.kt", """
+        package com.bmatjik.deeplinkcodegen.processor
         @com.bmatjik.deeplinkcodegen.annotations.Destination
         class KClass {
             fun foo() {
