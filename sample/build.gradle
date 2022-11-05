@@ -7,12 +7,15 @@ plugins {
 
 android {
     compileSdk 32
-    sourceSets {
-        main {
-            java {
-                srcDir "${buildDir.absolutePath}/generated/source/kaptKotlin/"
-            }
-        }
+//    sourceSets {
+//        main {
+//            java {
+//                srcDir "${buildDir.absolutePath}/generated/source/kaptKotlin/"
+//            }
+//        }
+//    }
+    kapt{
+        showProcessorStats = true
     }
     defaultConfig {
         applicationId "com.bmatjik.deeplinkcodegen.sample"

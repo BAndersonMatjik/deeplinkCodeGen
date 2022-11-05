@@ -26,8 +26,8 @@ class FirstFragment : Fragment() {
     ): View {
 
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        AHomeDeepLinkDestination(requireContext())
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -45,7 +45,11 @@ class FirstFragment : Fragment() {
 }
 
 @Destination
-class A (){
+class AHome() {
 
 }
 
+@Destination("B")
+class BHome() {
+
+}
