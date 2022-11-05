@@ -9,11 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8325e82a-c47a-4bed-8440-d9f3e86a8a6b" name="Changes" comment="Add Code gen And register Annotation Processor to Processor">
-      <change afterPath="$PROJECT_DIR$/processor/src/test/java/com/bmatjik/deeplinkcodegen/processor/DeeplinkProcessorTest.kt" afterDir="false" />
+    <list default="true" id="8325e82a-c47a-4bed-8440-d9f3e86a8a6b" name="Changes" comment="Initialize Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processor/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/processor/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annotations/src/main/java/com/bmatjik/deeplinkcodegen/annotations/Destination.kt" beforeDir="false" afterPath="$PROJECT_DIR$/annotations/src/main/java/com/bmatjik/deeplinkcodegen/annotations/Destination.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/processor/src/main/java/com/bmatjik/deeplinkcodegen/processor/DeeplinkProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/processor/src/main/java/com/bmatjik/deeplinkcodegen/processor/DeeplinkProcessor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/processor/src/test/java/com/bmatjik/deeplinkcodegen/processor/DeeplinkProcessorTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/processor/src/test/java/com/bmatjik/deeplinkcodegen/processor/DeeplinkProcessorTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/processor/src/test/java/com/bmatjik/deeplinkcodegen/processor/GenerateDeeplinkTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/processor/src/test/java/com/bmatjik/deeplinkcodegen/processor/GenerateDeeplinkTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,23 +56,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "jdk.selected.JAVA_MODULE": "corretto-11",
-    "last_directory_selection": "C:/Users/BillyAndersonMatjik/IdeaProjects/deeplinkCodeGen/processor/src/test/java/com/bmatjik/deeplinkcodegen/processor",
-    "last_opened_file_path": "C:/Users/BillyAndersonMatjik/Downloads",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-11&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/BillyAndersonMatjik/IdeaProjects/deeplinkCodeGen/processor/src/test/java/com/bmatjik/deeplinkcodegen/processor&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/BillyAndersonMatjik/Downloads&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -81,7 +81,7 @@
       <recent name="com.bmatjik.deeplinkcodegen.processor" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.DeeplinkProcessorTest.test @Destination Annotation Processor">
+  <component name="RunManager" selected="Gradle.GenerateDeeplinkTest">
     <configuration name="sample" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="deeplinkCodeGen.sample" />
       <option name="DEPLOY" value="true" />
@@ -115,6 +115,29 @@
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="DeeplinkProcessorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":processor:test" />
+            <option value="--tests" />
+            <option value="&quot;com.bmatjik.deeplinkcodegen.processor.DeeplinkProcessorTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="DeeplinkProcessorTest.test @Destination Annotation Processor" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -183,19 +206,11 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration default="true" type="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <option name="AUTO_RESTART" value="false" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.DeeplinkProcessorTest.test @Destination Annotation Processor" />
         <item itemvalue="Gradle.GenerateDeeplinkTest" />
+        <item itemvalue="Gradle.DeeplinkProcessorTest" />
+        <item itemvalue="Gradle.DeeplinkProcessorTest.test @Destination Annotation Processor" />
         <item itemvalue="Gradle.deeplinkCodeGen [sourceSets]" />
       </list>
     </recent_temporary>
@@ -230,7 +245,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667547232852</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Consolidate CodeGen and Processor">
+      <created>1667549660361</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667549660361</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Initialize Commit">
+      <created>1667550394548</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667550394548</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,7 +277,9 @@
     <MESSAGE value="Init commit depedency" />
     <MESSAGE value="initialize sample android project" />
     <MESSAGE value="Add Code gen And register Annotation Processor to Processor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Code gen And register Annotation Processor to Processor" />
+    <MESSAGE value="Consolidate CodeGen and Processor" />
+    <MESSAGE value="Initialize Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initialize Commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

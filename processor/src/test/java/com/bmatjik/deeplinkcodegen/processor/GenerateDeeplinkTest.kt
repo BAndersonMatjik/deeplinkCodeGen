@@ -10,11 +10,16 @@ import org.junit.jupiter.api.Test
 class GenerateDeeplinkTest {
 
     private fun fake() =ClassName("com.dummy.bmatjik", "CsdActivity")
+    @Test
+    fun `Generated Class DeeplinkDestination`() {
+        GenerateDeeplink.execute("test", "com.bmatjik", "Home","HomeActivity").apply {
+            println(this)
+        }
+    }
 
     @Test
-    fun `test generated class`() {
-
-        GenerateDeeplink.execute("test", "com.bmatjik", "Csd","CsdActivity").apply {
+    fun `Generated Class Dagger Extend for DeeplinkDestination`() {
+        GenerateDeeplink.executeDagger("testModule", "com.bmatjik", "HomeDestinationModule","HomeDestination").apply {
             println(this)
         }
     }

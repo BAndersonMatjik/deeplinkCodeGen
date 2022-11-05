@@ -11,6 +11,7 @@ class DeeplinkProcessorTest {
         val kotlinSource = SourceFile.kotlin(
             "KClass.kt", """
         package com.bmatjik.deeplinkcodegen.processor
+
         @com.bmatjik.deeplinkcodegen.annotations.Destination
         class KClass {
             fun foo() {
@@ -32,7 +33,35 @@ class DeeplinkProcessorTest {
             inheritClassPath = true
             messageOutputStream = System.out // see diagnostics in real time
         }.compile()
-
-
     }
+
+    @Test
+    fun `test @Destination("Home") with alias Annotation Processor`() {
+        val kotlinSource = SourceFile.kotlin(
+            "KClass.kt", """
+        package com.bmatjik.deeplinkcodegen.processor
+
+        @com.bmatjik.deeplinkcodegen.annotations.Destination(alias = "Home")
+        class KClass {
+            fun foo() {
+                // Classes from the test environment are visible to the compiled sources
+            }
+        }
+    """
+        )
+        val result = KotlinCompilation().apply {
+            sources = listOf(kotlinSource)
+
+//            // pass your own instance of an annotation processor
+            annotationProcessors = listOf(DeeplinkProcessor())
+
+            // pass your own instance of a compiler plugin
+//            compilerPlugins = listOf(MyComponentRegistrar())
+//            commandLineProcessors = listOf(Deeplin())
+
+            inheritClassPath = true
+            messageOutputStream = System.out // see diagnostics in real time
+        }.compile()
+    }
+
 }
