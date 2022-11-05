@@ -1,3 +1,4 @@
+
 buildscript {
     repositories {
         google()
@@ -8,7 +9,9 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.0"
     }
 }
-
+plugins{
+    id 'com.google.dagger.hilt.android' version '2.44' apply false
+}
 allprojects {
     repositories {
         google()

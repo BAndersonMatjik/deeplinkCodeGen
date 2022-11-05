@@ -70,8 +70,8 @@ class DeeplinkProcessor : AbstractProcessor() {
         val pack = processingEnv.elementUtils.getPackageOf(element).toString()
         val fileName = "${className}DeepLinkDestination"
         val params = element.getAnnotation(Destination::class.java)
-        val fileBuilder = FileSpec.builder(pack, fileName)
-        val classBuilder = TypeSpec.classBuilder(fileName)
+//        val fileBuilder = FileSpec.builder(pack, fileName)
+//        val classBuilder = TypeSpec.classBuilder(fileName)
         //when alias is blank will be default to className
         var deeplinkName  = className
         if (params.alias.isNotBlank()){
@@ -185,7 +185,7 @@ object GenerateDeeplink {
     private const val DAGGER_PACKAGE_NAME = "dagger"
     private const val DAGGER_MULTIBINDINGS_PACKAGE_NAME = "dagger.multibindings"
     private const val DAGGER_COMPONENT = "dagger.hilt.components"
-    private const val DEEPLINK_INTERFACE = "com.bmatjik.deeplinkcodegen.annotations.DeepLinkDestination"
+    private const val DEEPLINK_INTERFACE = "com.bmatjik.deeplinkcodegen.annotations"
     private fun getContext(): ClassName {
         val context = ClassName(ANDROID_CONTENT_PACKAGE_NAME, "Context")
 //        WildcardTypeName.consumerOf(context)
